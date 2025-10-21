@@ -7,14 +7,14 @@ int main(void){
     int counter = 10;
     int twoPower = 1;
 
-    printf("Enter 5 digit binary number: ");
+    printf("Enter binary number: ");
     scanf("%d", &binaryNumber);
 
-    while (counter <= 10000) {
+    while (binaryNumber > 0) {
         digit = binaryNumber % counter;
         binaryNumber /= counter;
-        decimalNumber += digit * 2 * twoPower;
-        counter *= 10;
+        printf("%d, %d \n", digit, binaryNumber);
+        decimalNumber += digit * twoPower;
         twoPower *= 2;
     }
 
